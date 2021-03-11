@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: goserver-service
+spec:
+  selector:
+    app: goserver
+  type: ClusterIP
+  ports:
+  - name: goserver-service
+    port: 80
+    targetPort: 8000
+    protocol: TCP
